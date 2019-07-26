@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp"
+    tools:context=".UserInfoFragment">
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:clickable="false"
+        android:focusable="false"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:elevation="12dp"
+        android:id="@+id/imgWrapper"
+        app:cardCornerRadius="20dp"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/userDataTextView"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="2dp">
+
+        <ImageView
+            android:id="@+id/avatarView"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:scaleType="centerInside"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.5"
+            tools:ignore="ContentDescription" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/userDataTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:layout_marginStart="4dp"
+        android:textSize="16dp"
+        app:layout_constraintLeft_toRightOf="@id/imgWrapper"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/timeDataTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:layout_marginStart="4dp"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toRightOf="@+id/imgWrapper"
+        app:layout_constraintTop_toBottomOf="@+id/userDataTextView" />
+    <TextView
+        android:id="@+id/timeDateSeparatorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="•"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toRightOf="@+id/timeDataTextView"
+        app:layout_constraintTop_toBottomOf="@+id/userDataTextView" />
+
+    <TextView
+        android:id="@+id/dateDataTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:layout_marginStart="4dp"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toRightOf="@+id/timeDateSeparatorTextView"
+        app:layout_constraintTop_toBottomOf="@+id/userDataTextView" />
+
+    <ImageView
+        android:id="@+id/statusIconImageView"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:scaleType="fitCenter"
+        android:gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintLeft_toRightOf="@+id/imgWrapper"
+        app:layout_constraintTop_toBottomOf="@+id/timeDataTextView"
+        />
+    <TextView
+        android:id="@+id/statusDataTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:layout_marginStart="4dp"
+        android:textSize="12dp"
+        android:textStyle="italic"
+        app:layout_constraintLeft_toRightOf="@+id/statusIconImageView"
+        app:layout_constraintTop_toBottomOf="@+id/timeDataTextView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

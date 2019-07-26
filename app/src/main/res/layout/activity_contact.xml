@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactActivity">
+
+    <TextView
+        android:id="@+id/contactLoading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="@string/loading"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/contactInfoWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/contactAlertText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.68"
+        android:visibility="gone" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/contactRemoveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="36dp"
+        android:layout_marginStart="40dp"
+        android:src="@drawable/baseline_delete_outline_24"
+        app:fabSize="normal"
+        android:backgroundTint="@color/colorWhite"
+        app:backgroundTint="@color/colorBlack"
+        app:borderWidth="1dp"
+        android:tint="@color/colorBlack"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/contactRemoveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:text="@string/delete"
+        android:textColor="@color/colorBlack"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@id/contactRemoveButton"
+        app:layout_constraintStart_toStartOf="@id/contactRemoveButton"
+        app:layout_constraintEnd_toEndOf="@id/contactRemoveButton"
+        android:visibility="gone"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/contactInviteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/baseline_share_24"
+        app:fabSize="normal"
+        app:backgroundTint="@color/colorPrimary"
+        android:tint="@color/colorWhite"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/contactInviteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:text="@string/invite"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@id/contactInviteButton"
+        app:layout_constraintStart_toStartOf="@id/contactInviteButton"
+        app:layout_constraintEnd_toEndOf="@id/contactInviteButton"
+        android:visibility="gone" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/contactCallButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/baseline_call_24"
+        app:fabSize="normal"
+        app:backgroundTint="@color/colorCall"
+        android:tint="@color/colorWhite"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/contactCallText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:text="@string/safe_call"
+        android:textColor="@color/colorCall"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@id/contactCallButton"
+        app:layout_constraintStart_toStartOf="@id/contactCallButton"
+        app:layout_constraintEnd_toEndOf="@id/contactCallButton"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
